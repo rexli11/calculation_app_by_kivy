@@ -11,7 +11,6 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.app import App
 import webbrowser
 from kivy.config import Config
-from kivy.core.window import Window
 Config.set('kivy', 'system', 'keyboard_mode')  # 控制手機系統與鍵盤
 
 # 版本號碼
@@ -68,19 +67,21 @@ class MyLabel_tip(Label):
 
 def webLink(instance):
     # 連結的網址
-    webbrowser.open("https://github.com/rexli11")
+    webbrowser.open("https://rexli01010629.wixsite.com/rex-li")
 
 
 # App主體
-class TscrtBounsIntroduction(App):
+class CalculationApp(App):
     def build(self):
         # 設定主要面板布局
         self.window = GridLayout()
         # 設定欄位數
         self.window.cols = 1
+        # Layout的大小設定
         self.window.size_hint = (0.8, 1)
         # 間隔
         self.window.spacing = 10
+        # APP位置的定位
         self.window.pos_hint = {"center_x": 0.5, "center_y": 0.5}
 
         # 頂部的Button連結
@@ -115,57 +116,46 @@ class TscrtBounsIntroduction(App):
 
         # 橫向布局_0
         self.hori = BoxLayout(orientation="horizontal", size_hint_y=None)
-        # self.hori.bind(minimum_height=self.layout.setter("height"))
         self.hori.spacing = 10
 
-        # 橫向布局_0
+        # 橫向布局_1
         self.one_hori = BoxLayout(orientation="horizontal", size_hint_y=None)
-        # self.hori.bind(minimum_height=self.layout.setter("height"))
         self.one_hori.spacing = 10
 
         # 橫向布局_2
         self.two_hori = BoxLayout(orientation="horizontal", size_hint_y=None)
-        # self.hori.bind(minimum_height=self.layout.setter("height"))
         self.two_hori.spacing = 10
 
         # 橫向布局_3
         self.three_hori = BoxLayout(orientation="horizontal", size_hint_y=None)
-        # self.hori.bind(minimum_height=self.layout.setter("height"))
         self.three_hori.spacing = 10
 
         # 橫向布局_4
         self.four_hori = BoxLayout(orientation="horizontal", size_hint_y=None)
-        # self.hori.bind(minimum_height=self.layout.setter("height"))
         self.four_hori.spacing = 10
 
         # 橫向布局_5
         self.five_hori = BoxLayout(orientation="horizontal", size_hint_y=None)
-        # self.hori.bind(minimum_height=self.layout.setter("height"))
         self.five_hori.spacing = 10
 
         # 橫向布局_6
         self.six_hori = BoxLayout(orientation="horizontal", size_hint_y=None)
-        # self.hori.bind(minimum_height=self.layout.setter("height"))
         self.six_hori.spacing = 10
 
         # 橫向布局_7
         self.seven_hori = BoxLayout(orientation="horizontal", size_hint_y=None)
-        # self.hori.bind(minimum_height=self.layout.setter("height"))
         self.seven_hori.spacing = 10
 
         # 橫向布局_8
         self.eight_hori = BoxLayout(orientation="horizontal", size_hint_y=None)
-        # self.hori.bind(minimum_height=self.layout.setter("height"))
         self.eight_hori.spacing = 10
 
         # 橫向布局_9
         self.nine_hori = BoxLayout(orientation="horizontal", size_hint_y=None)
-        # self.hori.bind(minimum_height=self.layout.setter("height"))
         self.nine_hori.spacing = 10
 
         # 橫向布局_10
         self.ten_hori = BoxLayout(orientation="horizontal", size_hint_y=None)
-        # self.hori.bind(minimum_height=self.layout.setter("height"))
         self.ten_hori.spacing = 10
 
         # =============================================================
@@ -733,4 +723,4 @@ class TscrtBounsIntroduction(App):
     # ----------------------------------------------------------
 # 執行
 if __name__ == "__main__":
-    TscrtBounsIntroduction().run()
+    CalculationApp().run()
